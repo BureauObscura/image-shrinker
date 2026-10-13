@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-shrinker"
+version = "1.0.0"
+description = "A safe command-line PNG optimization pipeline for storage-sensitive digital art."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "BureauObscura" }]
+keywords = ["png", "compression", "optimization", "digital-art", "on-chain"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+
+[project.urls]
+Homepage = "https://github.com/BureauObscura/image-shrinker"
+Repository = "https://github.com/BureauObscura/image-shrinker.git"
+Issues = "https://github.com/BureauObscura/image-shrinker/issues"
+
+[project.scripts]
+image-shrinker = "image_shrinker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
